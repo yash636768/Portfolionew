@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaTimes, FaEye } from 'react-icons/fa';
 
-
-
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -52,28 +50,6 @@ const Projects = () => {
       github: 'https://github.com/yash636768/BGMI',
       category: 'Frontend'
     },
-    // {
-    //   id: 5,
-    //   title: 'Weather Dashboard',
-    //   description: 'A beautiful weather dashboard with real-time weather data, 7-day forecasts, and interactive maps. Features location-based weather and customizable themes.',
-    //   shortDescription: 'Real-time weather dashboard with interactive maps',
-    //   image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=400&h=250&fit=crop',
-    //   tech: ['React', 'Weather API', 'Chart.js', 'Leaflet'],
-    //   live: 'https://example.com',
-    //   github: 'https://github.com',
-    //   category: 'API Integration'
-    // },
-    // {
-    //   id: 6,
-    //   title: 'Social Media Dashboard',
-    //   description: 'A comprehensive social media management dashboard for businesses. Features include post scheduling, analytics, and multi-platform integration.',
-    //   shortDescription: 'Social media management with analytics and scheduling',
-    //   image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=250&fit=crop',
-    //   tech: ['React', 'Node.js', 'PostgreSQL', 'Social APIs'],
-    //   live: 'https://example.com',
-    //   github: 'https://github.com',
-    //   category: 'Full Stack'
-    // }
   ];
 
   const categories = ['All', 'Full Stack', 'Frontend',];

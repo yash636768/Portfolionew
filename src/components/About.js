@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaPalette, FaRocket, FaUsers, FaHeart, FaLightbulb, FaLaptopCode } from 'react-icons/fa';
+import { FaCode, FaRocket, FaHeart, FaLightbulb, FaLaptopCode } from 'react-icons/fa';
 import profileImg from '../images/profile.jpg';
 
 const About = () => {

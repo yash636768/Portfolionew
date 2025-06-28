@@ -10,8 +10,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 
-console.log('App loaded');
-
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +27,6 @@ function App() {
       document.body.removeChild(link);
     } catch (error) {
       // Method 2: Fallback - open in new tab
-      console.log('Direct download failed, opening in new tab');
       window.open('/resume.pdf', '_blank');
     }
   };
