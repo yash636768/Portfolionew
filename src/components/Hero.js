@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import profileImg from '../images/profile.jpg';
 
 // Simple LeetCode SVG icon
@@ -190,23 +190,6 @@ const Hero = () => {
               {social.icon}
             </motion.a>
           ))}
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-gray-500 dark:text-gray-400"
-          >
-            <span className="text-sm mb-2">Scroll Down</span>
-            <FaArrowDown className="text-xl" />
-          </motion.div>
         </motion.div>
       </div>
     </section>

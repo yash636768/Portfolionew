@@ -63,6 +63,20 @@ function App() {
     { href: '#contact', label: 'Contact' }
   ];
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId) => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Handle navigation click
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
+  };
+
   return (
     <div className={`min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300`}>
       {/* Navbar */}
@@ -78,7 +92,11 @@ function App() {
           <ul className="hidden md:flex flex-1 justify-center space-x-8">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="nav-link text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors font-medium">
+                <a 
+                  href={item.href} 
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="nav-link text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer"
+                >
                   {item.label}
                 </a>
               </li>
@@ -138,8 +156,11 @@ function App() {
             <motion.a
               key={item.href}
               href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium"
+              onClick={(e) => {
+                handleNavClick(e, item.href);
+                setIsMenuOpen(false);
+              }}
+              className="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium cursor-pointer"
               whileHover={{ x: 10 }}
             >
               {item.label}
