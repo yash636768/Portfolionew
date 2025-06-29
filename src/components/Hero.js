@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 import profileImg from '../images/profile.jpg';
@@ -19,12 +19,12 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const texts = [
+  const texts = useMemo(() => [
     'Full Stack Developer',
     'UI/UX Designer', 
     'React Enthusiast',
     'Problem Solver'
-  ];
+  ], []);
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 50 : 100;
