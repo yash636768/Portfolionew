@@ -35,7 +35,7 @@ const Projects = () => {
       shortDescription: 'Modern portfolio with dark mode and animations',
       image: 'https://wiztoonz.com/wp-content/uploads/2022/04/Blog-Post-Portfolio-1170x658.jpg',
       tech: ['React', 'Tailwind CSS', 'Framer Motion', 'AOS'],
-      live: 'http://github.com/yash636768/Portfolionew',
+      live: 'https://yashpsingh.netlify.app/',
       github: 'http://github.com/yash636768/Portfolionew',
       category: 'Frontend'
     },
